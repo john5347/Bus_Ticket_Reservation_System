@@ -1,4 +1,4 @@
-# Bus_Ticket_Reservation_System
+<h1># Bus_Ticket_Reservation_System</h1>
 The system aims to provide a seamless experience for customers in booking and managing bus reservations. The bus ticket reservation system is a software solution that aims to automate the booking process, management of reservations, and customer engagement.
 Done by:
   Name 						               ID
