@@ -11,6 +11,16 @@ struct passenger {
     string gender;
 };
 const int MAX_SEATS = 30; // Maximum number of seats
+//Function to check appropirate value to Gender
+string checkForGender(string gender) {
+    if (gender == "male" || gender == "female" || gender == "Male" || gender == "Female") {
+        return gender;
+    } else {
+        cout<<"\n Enter Male or Female: ";
+        cin>>gender;
+        return checkForGender(gender);
+    }
+}
 //Function to display passenger information
 void displayPassengerInfo(const passenger& p) {
     cout<<"Seat Number: "<<p.seat<<endl;
@@ -32,9 +42,10 @@ passenger addPassenger(int seat) {
     cin>>p.last_name;
     cout<<"Enter Gender: ";
     cin>>p.gender;
+    p.gender = checkForGender(p.gender);
     cout<<"Enter Age: ";
     cin>>p.age;
-    cout< "Enter Phone Number: ";
+    cout<<"Enter Phone Number: ";
     cin>>p.phone_number;
     cout<<endl;
     return p;
